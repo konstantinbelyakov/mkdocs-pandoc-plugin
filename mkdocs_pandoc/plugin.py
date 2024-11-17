@@ -37,7 +37,7 @@ class PandocPlugin(BasePlugin):
             if env_name:
                 self.enabled = os.environ.get(env_name) == "1"
                 if not self.enabled:
-                    log.warn("Pandoc export is disabled (set environment variable {} to 1 to enable)".format(env_name))
+                    log.warning("Pandoc export is disabled (set environment variable {} to 1 to enable)".format(env_name))
                     return
 
         self.combined = self.config["combined"]
